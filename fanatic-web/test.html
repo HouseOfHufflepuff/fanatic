@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<div id="blah">
+
+</div>
+
+<script type="text/javascript">
+    function makeFunc() {
+        var name = "Mozilla";
+        function displayName() {
+            alert(name);
+        }
+        return displayName;
+    }
+
+    var myFunc = makeFunc();
+    myFunc();
+
+    function onetime() {
+        var node = document.getElementById("blah");
+        var nodeText = "";
+        var startx, starty;
+        var lastevenstart = 50; var lastevenend = 50;
+        var lastoddstart = 49; var lastoddend = 51;
+        for (y = 2; y <= 49; y++) {
+            if (y % 2 == 0) {
+                startx = lastevenstart - 2;
+                endx = lastevenend + 2;
+                lastevenstart = startx; lastevenend = endx;
+            }
+            else {
+                startx = lastoddstart - 2;
+                endx = lastoddend + 2;
+                lastoddstart = startx; lastoddend = endx;
+            }
+            for (x = startx; x <= endx; x = x + 2) {
+                nodeText += '{ "image": "water", "x": ' + x + ', "y": ' + y + '},<br>';
+            }
+            
+        }
+        var newy = 50;
+        lastevenstart = 0;
+        lastevenend = 102;
+        lastoddstart = -1;
+        lastoddend = 101;
+        for (y = 50; y >= 2 ; y--) {
+            if (newy % 2 == 0) {
+                startx = lastevenstart + 2;
+                endx = lastevenend - 2;
+                lastevenstart = startx; lastevenend = endx;
+            }
+            else {
+                startx = lastoddstart + 2;
+                endx = lastoddend - 2;
+                lastoddstart = startx; lastoddend = endx;
+            }
+
+            for (x = startx; x <= endx; x = x + 2) {
+                nodeText += '{ "image": "water", "x": ' + x + ', "y": ' + newy + '},<br>';
+            }
+            newy++;
+
+        }
+        node.innerHTML = nodeText;
+
+    }
+
+    function two() {
+        var node = document.getElementById("blah");
+        var nodeText = "";
+        var x, y;
+        
+        for (y = 0; y <= 5; y++) {
+            for (x = 0; x <= 10; x++) {
+                h = x / .446;
+                var bay = {
+                    x: x,
+                    y: y,
+                    h: h
+                }
+                console.log(bay);
+
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

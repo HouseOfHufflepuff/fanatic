@@ -1,0 +1,12 @@
+﻿{
+	"name": "fanatic-api",
+	"main": "server.js",
+	"dependencies": {
+		"hapi": "*",
+		"joi": "*",
+		"mongoose": "~3.6.13",
+		"nodemon": "*",
+		"q": "*",
+		"bcrypt-nodejs": "*"
+	}
+}

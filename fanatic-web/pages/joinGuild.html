@@ -1,0 +1,59 @@
+﻿<div ng-include="'pages/partials/nav.html'"></div>
+<div id="main" class="container">
+    <h1 class="entry-title text-center">#JOIN GUILD</h1>
+    <hr class="entry-title graphics" />
+    <div class="row">
+        <div class="col-lg-8">
+            Fanatic consists of five legendary guilds.  Each guild is named for the house founder.
+            The guild virtues are those of its founder and members.  By answering the questions below, we will determine your virtues, and place you into the most appropraite guild.
+            <br /><br />
+            <ul>
+                    <li>
+                        <b>Seaknight Templars</b> - Mariners, explorers, traders, and intellectuals.  Founder Wharfrat Von Seaknight.  Sigil Sea Kraken.  House of Newfoundland receives a scientific bonus.
+                    </li>
+                    <li>
+                        <b>Wolfram Oxhaus</b> - Masons and exceptional builders.  Secretive in their trade and sedentary.  Founder Sir Wolfram Oxhaus Sigil is the Ox.  Members receive a construction bonus.
+                    </li>
+                    <li>
+                        <b>House of Bloodhoof</b> - Agrarian society who values culture and magical creatures.  Founder Edelnari Zoo Bloodhoof.  Sigil is the centaur.  Guild receives agriculture bonus.
+                    </li>
+                    <li>
+                        <b>Guilde de Saint Germaine</b> - Warriors named after house founder Comte de Remy Saint Germain.  Militeristic and purveyors of conquest.  Sigil is the war bison.  Guild receives military bonus.
+                    </li>
+                    <li>
+                        <b>Maccabee Canaan</b> - Bankers and ruling elite.  Conquest through economic means.  Opportunistic and militant.  Sigil goblin.  Guild receives economic bonus.
+                    </li>
+                </ul>
+        </div>
+        <div class="col-lg-4">
+            <div class="row graphics simple">
+                <h5>Choose Your Guild</h5>
+            </div>
+            <div class="row">
+                <input type="radio" value="Seaknight Templars" name="guild" ng-model="guild" /> Seaknight Templars<br />
+                <input type="radio" value="Wolfram Oxhaus" name="guild" ng-model="guild" /> Wolfram Oxhaus<br />
+                <input type="radio" value="House of Bloodhoof " name="guild" ng-model="guild" /> House of Bloodhoof <br />
+                <input type="radio" value="Guilde de Saint Germaine" name="guild" ng-model="guild" /> Guilde de Saint Germaine<br />
+                <input type="radio" value="Maccabee Canaan" name="guild" ng-model="guild" /> Maccabee Canaan<br />
+            </div>
+            <div class="row graphics simple">
+                <h5>Choose World</h5>
+            </div>
+            <div class="row">
+                <select class="input-ui" id="Select1" ng-model="world">
+                    <option value="{{world.name}}" ng-repeat="world in worlds">{{world.name}} - {{world.type}}</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 no-padding" style="margin-top: 40px;">
+                    <button class="btn btn-lg" ng-click="submitJoinGuild()">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+<div ng-include="'pages/partials/footer.html'"></div>

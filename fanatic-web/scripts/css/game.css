@@ -1,0 +1,48 @@
+﻿* { margin:0; padding:0; } 
+
+html, body { 
+	width:100%; height:100%; 
+} 
+
+#gameCanvas {
+    background-color: black;
+    display:block;
+}
+
+.overlay {
+   background-color: white;
+   opacity: .7;
+   filter: alpha(opacity=70);
+   padding:8px;
+}
+
+.leftmenu {
+   top: 80px;
+   position: absolute; 
+   z-index: 10;
+   min-width: 240px;
+}
+
+img.city {
+    width:95px;
+    height:95px;
+    background:url("/images/icons/gameIcons.png") 0 0;
+}
+
+.game-left {
+    padding-left: 25px;
+}
+
+.game-center {
+    position: absolute;
+    z-index: 10;
+    top: 80px;
+    left: 260px;
+    display: none;
+    min-height: 400px;
+    min-width: 400px;
+}
+
+.glyphicon-lg {
+    font-size: 36px;
+}

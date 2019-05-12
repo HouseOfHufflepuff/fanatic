@@ -1,0 +1,26 @@
+﻿<div class="modal-header fanatic-login-modal-header">
+    <a class="close" data-dismiss="modal" ng-click="close()"></a>
+    <h3 class="modal-title">MEMBER SIGN-IN</h3>
+</div>
+<div class="modal-body fanatic-login-modal-body">
+    <select class="fanatic-input-login">
+        <option value="">Sign-In</option>
+        <option value="">Forgot password</option>
+    </select>
+    <div class="controls">
+        <span class="icon-user"></span>
+        <input type="text" class="fanatic-input-login" name="account" placeholder="Username" ng-model="account.username">
+    </div>
+    <div class="controls">
+        <span class="icon-key"></span>
+        <input type="password" class="fanatic-input-login form-control" name="password" placeholder="Password" ng-model="account.password">
+    </div>
+    <div style="display:none" class="bs-callout bs-callout-danger" id="loginError">
+        <h4>Sorry:</h4>
+        <p class="text-error">There was an error signing you in.  Please try again.</p>
+    </div>
+</div>
+
+<div class="modal-footer fanatic-login-modal-footer">
+    <button type="button" class="btn-outer" ng-click="signin()"><span class="btn-inner">SIGN-IN</span></button>
+</div>

@@ -1,0 +1,21 @@
+use fanatic
+
+server = {
+    "ID": 0,
+    "name": "Bloodhoof",
+    "type": "PVP"
+}
+
+db.servers.insert(server);
+
+report = {
+    "ID": 0,
+	"player": "Ten More Wizards",
+    "status": "read",
+    "color": "green",
+    "lost": 200,
+    "killed": 600,
+    "gold": 900
+}
+
+db.reports.insert(report);

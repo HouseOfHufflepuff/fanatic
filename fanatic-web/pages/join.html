@@ -1,0 +1,58 @@
+﻿<div ng-include="'pages/partials/nav.html'"></div>
+<div id="main" class="container">
+    <h1 class="entry-title text-center">#JOIN FANATIC</h1>
+    <hr class="entry-title graphics" />
+    <div class="entry-content text-center">
+        <p>
+        Fanatic is a game where five legendary guilds battle a world for controlling power.  
+        Each player is placed into one of the five guilds based on thier style of rule.  
+        Like-minded players will combine to take over rival guilds through culture and warfare.
+        The game continues real-time 24/7/365 until a single guild controls 60% of the worlds evolving population.
+        Fanatic is the most complicated and rewarding MMORTS you'll ever play.  
+
+        </p>
+        <b>Ready to get started?</b>
+    </div>
+    <div class="container" style="width: 80%;">
+        <div class="row" style="margin-top: 60px">
+            <div class="col-lg-6 no-padding graphics simple">
+                <h5>WIZARD NAME</h5>
+            </div>
+            <div class="col-lg-6 no-padding graphics simple">
+                <h5>PASSWORD</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 no-padding">
+                <input id="username" class="input-ui" ng-model="account.username" placeholder="Wizard name" type="text" />
+            </div>
+            <div class="col-lg-6 no-padding">
+                <input id="password" class="input-ui" ng-model="account.password" placeholder="Password" type="password" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 no-padding graphics simple">
+                <h5>EMAIL</h5>
+            </div>
+            <div class="col-lg-6 no-padding graphics simple">
+                <h5>COUNTRY</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 no-padding">
+                <input id="email" class="input-ui" ng-model="account.email" placeholder="Email" type="email" />
+            </div>
+            <div class="col-lg-6 no-padding">
+                <select id="country" class="input-ui" ng-model="account.country" ng-init="account.country = countries[224]" ng-options="country for country in countries"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 no-padding" style="margin-top: 40px;">
+                <button class="btn btn-lg" ng-click="submitJoin()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div ng-include="'pages/partials/footer.html'"></div>

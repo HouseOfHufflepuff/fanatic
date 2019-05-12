@@ -1,0 +1,41 @@
+﻿<link rel="stylesheet" type="text/css" href="/scripts/css/game.css" />
+<div ng-include="'pages/partials/nav.html'"></div>
+<canvas id="gameCanvas"></canvas>
+<div class="leftmenu game-left">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Selected Tile</h3>
+        </div>
+        <div class="panel-body">
+            <div id="gamemenu" ng-controller="selectedTileController">
+
+            </div>
+            <div id="selectedTileActions" ng-controller="selectedTileController">
+                <br /><br />
+                <button type="button" class="btn btn-primary" type="submit" ng-click="foundCity()" id="foundCityBtn" style="display:none;"><span class="glyphicon glyphicon-flag"></span> Found City</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="game-center" id="game-center-menu">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <button type="button" class="btn btn-default btn-xs pull-right" ng-click="closeMainMenu();">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <h3 class="panel-title" id="game-center-menu-title">Menu</h3>
+        </div>
+        <div class="panel-body" id="game-center-menu-body">
+        </div>
+    </div>
+</div>
+
+<script src="/bower_components/kineticjs/kinetic.min.js" type="text/javascript"></script>
+<script src="/scripts/js/utils/trig.js" type="text/javascript"></script>
+<script src="/scripts/js/models/castle.js" type="text/javascript"></script>
+<script src="/scripts/js/models/dungeon.js" type="text/javascript"></script>
+<script src="/scripts/js/models/reports.js" type="text/javascript"></script>
+
+
+
